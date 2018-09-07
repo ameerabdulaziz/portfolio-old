@@ -19,7 +19,11 @@
 
         {% include 'header.html' %}
 
-        {% include 'footer.html' %}
+        {% block content %}{% endblock %}
+
+        {% block footer %}
+            {% include 'footer.html' %}
+        {% endblock %}
 
         <script src="js/main.js"></script>
     </body>
