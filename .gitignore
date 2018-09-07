@@ -1,0 +1,9 @@
+.idea
+
+node_modules
+
+outline.md
+
+staticfiles
+db.sqlite3
+*.pyc
