@@ -1,3 +1,8 @@
+{% url 'pages:home-page' as home %}
+{% url 'pages:about-page' as about %}
+{% url 'projects:project-list' as projects %}
+{% url 'pages:contact-page' as contact %}
+
 <header>
     <div class="menu-btn">
         <div class="btn-line"></div>
@@ -10,22 +15,22 @@
             <div class="portrait"></div>
         </div>
         <ul class="menu-nav">
-            <li class="nav-item current">
+            <li class="nav-item {% if request.path == home %}current{% endif %}">
                 <a href="{% url 'pages:home-page'%}" class="nav-link">
                     Home
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if request.path == about %}current{% endif %}">
                 <a href="{% url 'pages:about-page' %}" class="nav-link">
                     About Me
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if request.path == projects %}current{% endif %}">
                 <a href="{% url 'projects:project-list' %}" class="nav-link">
                     Projects
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if request.path == contact %}current{% endif %}">
                 <a href="{% url 'pages:contact-page' %}" class="nav-link">
                     Contact Me
                 </a>
